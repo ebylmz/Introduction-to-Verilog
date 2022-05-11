@@ -1,4 +1,4 @@
-module Encoder8to3(input[7:0] Y, output[2:0] A);
+module encoder8to3(input[7:0] Y, output[2:0] A);
 	// data flow model
 	// assign A[0] = Y[1] | Y[3] | Y[5] | Y[7];
 	// assign A[1] = Y[2] | Y[3] | Y[6] | Y[7];

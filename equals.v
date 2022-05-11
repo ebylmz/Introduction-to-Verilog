@@ -1,4 +1,4 @@
-module Equals(input [3:0] A, input [3:0] B, output eq);
+module equals(input [3:0] A, input [3:0] B, output eq);
 	wire[3:0] compare;
 	// structural description
 	

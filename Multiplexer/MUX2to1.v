@@ -1,7 +1,8 @@
-module MUX2to1(input[1:0] I, input S, input E, output Y);
+module mux2to1(input[1:0] I, input S, input E, output Y);
 	// data flow model
 	// assign Y = E & ((I[0] & ~S) | (I[1] & S));
-	
+	// assing Y = E & (S ? I[1] : I[0])
+
 	// gate level model
 	wire notS;
 	not (notS, S);

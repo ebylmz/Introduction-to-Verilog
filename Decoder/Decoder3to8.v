@@ -1,4 +1,4 @@
-module Decoder3to8(input[2:0] I, input E, output[7:0] Y);
+module decoder3to8(input[2:0] I, input E, output[7:0] Y);
 	// data flow model
 	// assign Y[0] = E & ~I[2] & ~I[1] & ~I[0];
 	// assign Y[1] = E & ~I[2] & ~I[1] & I[0];
@@ -11,6 +11,6 @@ module Decoder3to8(input[2:0] I, input E, output[7:0] Y);
 	
 	// gate level model
 	// E is not used !!!
-	Decoder2to4 d1(.E(~I[2]), .I(I[1:0]), .Y(Y[3:0]));
-	Decoder2to4 d2(.E(I[2]), .I(I[1:0]), .Y(Y[7:4]));
+	decoder2to4 d1(.E(~I[2]), .I(I[1:0]), .Y(Y[3:0]));
+	decoder2to4 d2(.E(I[2]), .I(I[1:0]), .Y(Y[7:4]));
 endmodule

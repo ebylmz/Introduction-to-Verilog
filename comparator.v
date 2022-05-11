@@ -1,5 +1,5 @@
 // data flox modeling
-module Comparator(input [3:0] A, B, output equals, larger, smaller);
+module comparator(input [3:0] A, B, output equals, larger, smaller);
 	wire[3:0] eq; 
 	// compare each bit one by one
 	assign eq[3] = A[3] ~^ B[3];
@@ -19,7 +19,7 @@ endmodule
 
 
 // Gate Level Modeling
-// module Comparator(input[3:0] A, B, output larger, smaller, equals);
+// module comparator(input[3:0] A, B, output larger, smaller, equals);
 // 	wire[3:0] eq;
 // 	xnor (eq[3], A[3], B[3]);
 // 	xnor (eq[2], A[2], B[2]);
