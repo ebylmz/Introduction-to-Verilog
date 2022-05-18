@@ -64,6 +64,12 @@ module shiftReg(input clk, shift_r, input[4:0] d, output reg[4:0] q);
 			q <= (shift_r) ? d >> 1 : d << 1;
 endmodule
 
+// comparator
+module comparator(input[4:0] a, b, output a_lt_b, a_gt_b, a_eq_b);
+	assign a_lt_b = a < b;
+	assign a_gt_b = a > b;
+	assign a_eq_b = a == b;
+endmodule
 
 // counter or timer
 module counter(input clk, output reg[31:0] count);
