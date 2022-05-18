@@ -1,8 +1,8 @@
-module example5(
-	input 		          		CLOCK_50,
-	input 		     [9:0]		KEY,
-	input 		          		RESET_N,
-	output		     [9:0]		LEDR
+module example5 (
+	input CLOCK_50,
+	input[9:0] KEY,
+	input RESET_N,
+	output[9:0] LEDR
 );
 
 	wire[31:0] count;
